@@ -75,6 +75,52 @@ a{
     font-size: 1.2rem;
     padding-left: 0;
 }
+/* folded parts: projects, a bit more about me */
+.section-2 details{
+    margin: 1.2rem 0;
+    border-top: 1px solid #2a2d31;
+    padding-top: 0.8rem;
+}
+
+.section-2 summary{
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.section-2 summary::-webkit-details-marker{
+    display: none;
+}
+
+.section-2 summary::before{
+    content: "\25B8";
+    display: inline-block;
+    width: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.section-2 details[open] summary::before{
+    transform: rotate(90deg);
+}
+
+.section-2 details > a,
+.section-2 details > p{
+    margin-left: 1.2rem;
+}
+
+.section-2 details > p{
+    padding-top: 0.6rem;
+}
+
+.section-2 .note{
+    font-size: 0.95rem;
+}
+
+.section-2 h2 + p{
+    line-height: 1.5;
+}
+
 /* animations / utilities */
 .section-2 a:hover{
     color: #fff;
@@ -93,7 +139,7 @@ a{
     padding-left: 10px;
 }
 
-/* media queres */
+/* media queries */
 @media(max-width:780px){
     .grid-2{
         grid-template-columns: 1fr;
